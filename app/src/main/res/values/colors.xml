@@ -4,5 +4,23 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="cl_ea">#EAEAEA</color>
+
+    <color name="cl_bg">#F6F6F6</color>
+    <color name="cl_font_ba">#FFBABABA</color>
+    <color name="cl_font_ea">#EAEAEA</color>
+    <color name="cl_font_46">#FF464646</color>
+    <color name="cl_80c469">#FF80C469</color>
+    <color name="cl_888888">#FF888888</color>
+    <color name="cl_3a3f47">#FF3A3F47</color>
+    <color name="cl_919cab">#FF9FA3A9</color>
+    <color name="cl_919cb5">#FF919CB5</color>
+    <color name="cl_1a">#1a000000</color>
     <color name="cl_f6">#FFF6F6F6</color>
+    <color name="cl_3b">#FF3B3B3B</color>
+    <color name="cl_be">#FFBEBEBE</color>
+    <color name="cl_598949">#598949</color>
+    <color name="cl_eb">#EBEBEB</color>
+    <color name="cl_5C6167">#FF5C6167</color>
+    <!-- 蒙版 -->
+    <color name="cl_tb">#54000000</color>
 </resources>
