@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_educationaladministrationsystem" default="compile.module.educationaladministrationsystem">
+  <dirname property="module.educationaladministrationsystem.basedir" file="${ant.file.module_educationaladministrationsystem}"/>
+  
+  <property name="module.jdk.home.educationaladministrationsystem" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.educationaladministrationsystem" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.educationaladministrationsystem" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.educationaladministrationsystem" value="-encoding UTF-8 -source 1.7 -target 1.7 ${compiler.args}"/>
+  
+  <property name="educationaladministrationsystem.output.dir" value="${module.educationaladministrationsystem.basedir}/../../build/classes/production/EducationalAdministrationSystem"/>
+  <property name="educationaladministrationsystem.testoutput.dir" value="${module.educationaladministrationsystem.basedir}/../../build/classes/test/EducationalAdministrationSystem"/>
+  
+  <path id="educationaladministrationsystem.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="educationaladministrationsystem.module.production.classpath">
+    <path refid="${module.jdk.classpath.educationaladministrationsystem}"/>
+  </path>
+  
+  <path id="educationaladministrationsystem.runtime.production.module.classpath">
+    <pathelement location="${educationaladministrationsystem.output.dir}"/>
+  </path>
+  
+  <path id="educationaladministrationsystem.module.classpath">
+    <path refid="${module.jdk.classpath.educationaladministrationsystem}"/>
+    <pathelement location="${educationaladministrationsystem.output.dir}"/>
+  </path>
+  
+  <path id="educationaladministrationsystem.runtime.module.classpath">
+    <pathelement location="${educationaladministrationsystem.testoutput.dir}"/>
+    <pathelement location="${educationaladministrationsystem.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.educationaladministrationsystem">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.educationaladministrationsystem">
+    <patternset refid="excluded.from.module.educationaladministrationsystem"/>
+  </patternset>
+  
+  
+  <target name="compile.module.educationaladministrationsystem" depends="compile.module.educationaladministrationsystem.production,compile.module.educationaladministrationsystem.tests" description="Compile module EducationalAdministrationSystem"/>
+  
+  <target name="compile.module.educationaladministrationsystem.production" depends="register.custom.compilers" description="Compile module EducationalAdministrationSystem; production classes"/>
+  
+  <target name="compile.module.educationaladministrationsystem.tests" depends="register.custom.compilers,compile.module.educationaladministrationsystem.production" description="compile module EducationalAdministrationSystem; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.educationaladministrationsystem" description="cleanup module">
+    <delete dir="${educationaladministrationsystem.output.dir}"/>
+    <delete dir="${educationaladministrationsystem.testoutput.dir}"/>
+  </target>
+</project>
